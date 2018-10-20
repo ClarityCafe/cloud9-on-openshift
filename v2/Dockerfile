@@ -6,7 +6,7 @@ RUN apt-get -y install \
         gcc \
         g++-4.9
 
-RUN git clone https://github.com/exsilium/cloud9 && \
+RUN git clone https://github.com/pylonide/pylon cloud9 && \
     cd cloud9 && \
     npm install --unsafe-perm && \
     cd .. && \
