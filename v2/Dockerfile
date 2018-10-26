@@ -37,8 +37,8 @@ RUN chgrp -R 0 /home/user && \
     chmod -R g=u /home/user && \
     chmod g=u /etc/passwd;
 RUN chmod +x /tmp/run_usercommand.sh
-ENV C9_USERNAME ""
-ENV C9_PASSWORD ""
+ENV PLN_USERNAME ""
+ENV PLN_PASSWORD ""
 VOLUME ["/workspace"]
 USER 10001
 WORKDIR /opt
