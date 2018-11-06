@@ -18,7 +18,7 @@ RUN git clone https://github.com/pylonide/pylon cloud9 && \
 
 
 # run layer
-FROM fedora:27
+FROM fedora:28
 MAINTAINER Capuccino <chinodesuuu@gmail.com>
 
 COPY --from=build /opt/cloud9 /opt/cloud9
