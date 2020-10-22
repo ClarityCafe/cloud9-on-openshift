@@ -18,8 +18,7 @@ FROM centos as run
 COPY --from=build /opt /opt
 
 # Install bare minimum things for our stack. We don't need anything flashy
-# We will let the user install their own things.
-# We will have PowerTools enabled just for good measure.
+# We will let the user install their own things. However, PowerTools is enabled for good measure.
 
 RUN yum update -y && \
     yum install -y \
