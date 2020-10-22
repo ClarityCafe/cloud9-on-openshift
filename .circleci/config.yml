@@ -20,7 +20,7 @@ jobs:
             mv /tmp/docker/* /usr/bin
       - run:
           name: Docker Build (Cloud9 V2)
-          command: docker build -t chinodesuuu/c9:v2 ./v2
+          command: docker build -t chinodesuuu/c9:v2 -f v2.dockerfile .
       - run:
          name: Docker Build (AWS Cloud9 SDK (Previously Cloud9 V3 SDK))
          command: docker build -t chinodesuuu/c9:v3 ./v3
@@ -41,7 +41,7 @@ jobs:
             mv /tmp/docker/* /usr/bin      
       - run:
           name: Docker Build (Cloud9 V2)
-          command: docker build -t chinodesuuu/c9:v2 ./v2
+          command: docker build -t chinodesuuu/c9:v2 -f v2.dockerfile .
       - run:
          name: Docker Build (AWS Cloud9 SDK (Previously Cloud9 V3 SDK))
          command: docker build -t chinodesuuu/c9:v3 ./v3
