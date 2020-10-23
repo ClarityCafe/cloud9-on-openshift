@@ -30,8 +30,7 @@ RUN yum update -y && \
         git \
         cmake \
         && \
-    dnf config-manager --set-enabled PowerTools && \
-    dnf group install "Development tools" -y;
+    dnf config-manager --set-enabled PowerTools;
 
 # Create the user
 RUN adduser user -u 1000 -g 0 -r -m -d /home/user/ -c "Default Application User" -l && \
