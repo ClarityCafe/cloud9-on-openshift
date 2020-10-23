@@ -42,5 +42,6 @@ RUN curl -sSL https://github.com/gbraad/ansible-playbooks/raw/master/playbooks/i
 
 EXPOSE 8181
 
-ENTRYPOINT ["/home/user/.c9/node/bin/node"]
-CMD ["/opt/c9sdk/server.js", "-w /workspace", "-a $C9_USERNAME:$C9_PASSWORD", "--port 8181", "--listen 0.0.0.0"]
+ADD --chown=user:root run_v3.sh . 
+
+CMD ["/opt/run_v3.sh"]
